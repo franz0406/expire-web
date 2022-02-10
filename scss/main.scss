@@ -1,0 +1,147 @@
+@import 'reset'; // RESET CSS
+@import 'common'; // COMMON CSS
+
+// HEADER
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    
+    > nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        > h1 {
+            margin: 0 55px;
+            order:2;
+            a{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    margin: 22px 0;
+                }
+                span{
+                    font-size:32px;
+                    font-weight: 300;
+                    color:#fafafa;
+                }
+            }
+        }
+        > ul {
+            display: flex;
+
+            li {
+                margin: 0 25px;                
+                a {
+                    position: relative;
+                    padding:7px 9px;
+                    font:300 18px/18px 'Raleway', sans-serif;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color:#fafafa;
+                    transition: color 0.2s;
+                    &:after{
+                        content: "";
+                        width: 0%; height:1px;
+                        position: absolute;
+                        left: 50%; bottom: 0;
+                        transform: translateX(-50%);
+                        background: linear-gradient(to right, #902616, $primary);
+                        transition: width 0.2s;
+                    }
+                    &:hover{
+                        color:$primary;                        
+                    }
+                    &:hover:after{
+                        width: 100%;
+                    }
+                }
+            }
+            &.main_left_menu {
+                order:1;
+            }
+            &.main_right_menu {
+                order:3;
+            }
+        }
+    }
+}
+
+// MAIN SLIDER
+.main_slider {
+    padding-top: 25vh;
+    height:100vh;
+    background-image: url(../images/header_bg.jpg);
+    background-position: center;
+    background-size: cover;
+
+    .swiper-slide {
+
+        h2 {
+            margin-bottom: 60px;
+            color:#fff;
+        }
+        p {
+            margin-bottom: 60px;
+            font:300 50px/65px 'Raleway', sans-serif;
+            letter-spacing: 0.01rem;
+            color:#fafafa;
+        }
+        .btn:not(:last-of-type) {
+            margin-right: 20px;
+        }
+    }
+    > .main_slider_wrapper {
+        overflow: hidden;
+    }
+
+
+    // Swiper Js
+    .swiper-pagination {
+        bottom: 10vh;
+        .swiper-pagination-bullet {
+            position: relative;
+            width: 21px;
+            height: 21px;
+            border-radius: 0;
+            border: 2px solid #fff;
+            background: transparent;
+            opacity: 0.5;
+            overflow: hidden;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 50%; top: 50%;
+                transform: translate(-50%, -50%);
+                width: 0px;
+                height: 0px;
+                border-radius: 50%;
+                background: $primary;
+                transition: 0.5s;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            &:before {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .swiper-button-prev {
+        color:#8b8d91;
+        transition: color 0.3s;
+        &:hover {
+            color:$primary;
+        }
+    }
+    .swiper-button-next {
+        color:#8b8d91;
+        transition: color 0.3s;
+        &:hover {
+            color:$primary;
+        }
+    }
+}

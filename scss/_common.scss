@@ -1,0 +1,107 @@
+// VARIABLES
+    // COLOR
+    $primary:#ff3c1f;
+
+
+// 폰트
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@300;600&display=swap');
+/*
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+
+    light:300
+    semibold:600
+*/
+
+body {
+
+    font: 14px/1 'Open Sans', sans-serif;
+    letter-spacing: 0.01em;
+    color:#4e5860;
+
+    p {
+        line-height: 25px;
+    }
+    
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+    }
+
+    .jombo_tit {
+        font-size: 70px;
+    }
+
+    .content_tit {
+        font-size: 45px;
+        &.left {
+            text-align: left;
+        }
+        &.center {
+            text-align: center;
+        }
+    }
+
+    .heading_1 {
+        font-size: 40px;
+    }
+
+    .heading_2 {
+        font-size: 33px;
+    }
+
+    .heading_3 {
+        font-size: 28px;
+    }
+
+    .heading_4 {
+        font-size: 25px;
+    }
+
+    .heading_5 {
+        font-size: 20px;
+    }
+
+    .heading_6 {
+        font-size: 15px;
+    }
+}
+
+// STYLE GUIDE
+
+.frame { // 대각선 모양
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content:"";
+        width: 50%;
+        left: 0; top: -30px;
+        height: 30px;
+        background: #fff;
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        left: 50%; top: -30px;
+        width: 0;   height: 0;
+        border-style: solid;
+        border-width: 15px;
+        border-color: transparent transparent #fff #fff;
+    }
+}
+
+.btn { // 버튼    
+    display: inline-block;
+    padding:0 40px;
+    font:600 16px/50px 'Raleway', sans-serif;
+    color:#fff;
+    text-transform: uppercase;
+    border:1px solid #fff;
+    box-sizing: border-box;
+    background: transparent;
+    transition: 0.3s;
+    &:hover {
+        background: $primary;
+    }
+}
