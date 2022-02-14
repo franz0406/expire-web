@@ -148,5 +148,115 @@ header {
 
 // ABOUT US
 .about_us {
-    
+    .feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            margin-top: -30px;
+            font-size:28px;
+            line-height: 40px;
+        }
+    }
+
+    .feature_item {
+        position: relative;
+        padding:0 23px 23px;
+        border: 1px solid #e6e9ed;
+        > h3 {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap:10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color:#303030;
+        }
+        > .ribbon {
+            position: absolute;
+            left: -1px; bottom: 100%;
+            width: 50%;
+            height: 30px;
+            background: #fff;
+            border-top: 1px solid #e6e9ed;
+            border-left: 1px solid #e6e9ed;
+            &::after {
+                position: absolute;
+                content: "";
+                left: 100%; top: 0;
+                width: 30px;
+                height: 30px;
+                border-width: 15px;
+                border-style: solid;
+                border-color: transparent transparent #fff #fff;
+                box-sizing: border-box;
+            }
+            .box {
+                position: absolute;
+                display: block;
+                top: 0; left: 100%;
+                transform-origin: 0 0;
+                transform: rotate(-45deg);
+                width: 37px;
+                height: 41px;
+                border-left: 1px solid #e6e9ed;
+            }
+        }
+    }
+    .typo {
+        width: 41px;
+        height: 41px;
+        background-position: 0 -38px ;
+    }
+    .full {
+        width: 41px;
+        height: 41px;
+        background-position: -51px -38px ;
+    }
+    .accurate {
+        width: 41px;
+        height: 41px;
+        background-position: -101px -38px ;
+    }
+}
+
+// PARALLAX
+.parallax {
+    background: $primary;
+    color:#fff;
+    .content_tit::before {
+        background: #fff;
+    }
+    &.frame {
+        &:before {
+            background: $primary;
+        }
+        &:after {
+            border-color: transparent transparent $primary $primary;
+        }
+    }
+    blockquote {
+        position: relative;
+        max-width: 880px;
+        margin: 0 auto;
+        &::before {
+            position: absolute;
+            top: -40px; left: -35px;
+            content: '“';
+            font-family: 'Times New Roman', sans-serif;
+            font-size:150px;
+            opacity: 0.3;
+        }
+        p {
+            margin-bottom: 50px;
+            font-size: 30px;
+            line-height: 40px;
+            font-style: italic;
+        }
+        small {
+            font-size: 30px;
+        }
+    }
 }

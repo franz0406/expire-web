@@ -33,10 +33,32 @@ body {
     }
 
     .content_tit {
+        position: relative;
         font-size: 45px;
+        margin-bottom: 35px;
         &.left {
             text-align: left;
         }
+        &.center {
+            text-align: center;
+            &::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &::before {
+            position: absolute;
+            content:"";
+            left: 0; top: calc( 100% + 24px );
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(to right, #ff3c1f, #4e5860);
+        }
+    }
+
+    .content_desc {
+        font-size:18px;
+        margin-bottom: 75px;
         &.center {
             text-align: center;
         }
@@ -71,8 +93,12 @@ main > section {
     padding:100px 0 130px 0;
 }
 
-// STYLE GUIDE
-
+.sprite {
+    display: inline-block;
+    text-indent: -9999em;
+    background-image: url(../images/sprites_image.png);
+    background-repeat: no-repeat;
+}
 .frame { // 대각선 모양
     position: relative;
 
@@ -106,6 +132,9 @@ main > section {
     background: transparent;
     transition: 0.3s;
     &:hover {
+        background: $primary;
+    }
+    &.primary_bg {
         background: $primary;
     }
 }

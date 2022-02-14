@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -37,11 +38,19 @@ body h1, body h2, body h3, body h4, body h5, body h6 { font-family: 'Raleway', s
 
 body .jombo_tit { font-size: 70px; }
 
-body .content_tit { font-size: 45px; }
+body .content_tit { position: relative; font-size: 45px; margin-bottom: 35px; }
 
 body .content_tit.left { text-align: left; }
 
 body .content_tit.center { text-align: center; }
+
+body .content_tit.center::before { left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+
+body .content_tit::before { position: absolute; content: ""; left: 0; top: calc( 100% + 24px); width: 100px; height: 1px; background: -webkit-gradient(linear, left top, right top, from(#ff3c1f), to(#4e5860)); background: linear-gradient(to right, #ff3c1f, #4e5860); }
+
+body .content_desc { font-size: 18px; margin-bottom: 75px; }
+
+body .content_desc.center { text-align: center; }
 
 body .heading_1 { font-size: 40px; }
 
@@ -57,6 +66,8 @@ body .heading_6 { font-size: 15px; }
 
 main > section { padding: 100px 0 130px 0; }
 
+.sprite { display: inline-block; text-indent: -9999em; background-image: url(../images/sprites_image.png); background-repeat: no-repeat; }
+
 .frame { position: relative; }
 
 .frame:before { position: absolute; content: ""; width: 50%; left: 0; top: -30px; height: 30px; background: #fff; }
@@ -66,6 +77,8 @@ main > section { padding: 100px 0 130px 0; }
 .btn { display: inline-block; padding: 0 40px; font: 600 16px/50px 'Raleway', sans-serif; color: #fff; text-transform: uppercase; border: 1px solid #fff; -webkit-box-sizing: border-box; box-sizing: border-box; background: transparent; -webkit-transition: 0.3s; transition: 0.3s; }
 
 .btn:hover { background: #ff3c1f; }
+
+.btn.primary_bg { background: #ff3c1f; }
 
 header { position: absolute; right: 0; left: 0; }
 
@@ -122,3 +135,39 @@ header > nav > ul.main_right_menu { -webkit-box-ordinal-group: 4; -ms-flex-order
 .main_slider .swiper-button-next { color: #8b8d91; -webkit-transition: color 0.3s; transition: color 0.3s; }
 
 .main_slider .swiper-button-next:hover { color: #ff3c1f; }
+
+.about_us .feature { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.about_us .feature p { margin-top: -30px; font-size: 28px; line-height: 40px; }
+
+.about_us .feature_item { position: relative; padding: 0 23px 23px; border: 1px solid #e6e9ed; }
+
+.about_us .feature_item > h3 { margin-bottom: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; -ms-flex-wrap: wrap; flex-wrap: wrap; gap: 10px; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 600; color: #303030; }
+
+.about_us .feature_item > .ribbon { position: absolute; left: -1px; bottom: 100%; width: 50%; height: 30px; background: #fff; border-top: 1px solid #e6e9ed; border-left: 1px solid #e6e9ed; }
+
+.about_us .feature_item > .ribbon::after { position: absolute; content: ""; left: 100%; top: 0; width: 30px; height: 30px; border-width: 15px; border-style: solid; border-color: transparent transparent #fff #fff; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.about_us .feature_item > .ribbon .box { position: absolute; display: block; top: 0; left: 100%; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); width: 37px; height: 41px; border-left: 1px solid #e6e9ed; }
+
+.about_us .typo { width: 41px; height: 41px; background-position: 0 -38px; }
+
+.about_us .full { width: 41px; height: 41px; background-position: -51px -38px; }
+
+.about_us .accurate { width: 41px; height: 41px; background-position: -101px -38px; }
+
+.parallax { background: #ff3c1f; color: #fff; }
+
+.parallax .content_tit::before { background: #fff; }
+
+.parallax.frame:before { background: #ff3c1f; }
+
+.parallax.frame:after { border-color: transparent transparent #ff3c1f #ff3c1f; }
+
+.parallax blockquote { position: relative; max-width: 880px; margin: 0 auto; }
+
+.parallax blockquote::before { position: absolute; top: -40px; left: -35px; content: '“'; font-family: 'Times New Roman', sans-serif; font-size: 150px; opacity: 0.3; }
+
+.parallax blockquote p { margin-bottom: 50px; font-size: 30px; line-height: 40px; font-style: italic; }
+
+.parallax blockquote small { font-size: 30px; }
