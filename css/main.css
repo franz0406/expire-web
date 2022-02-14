@@ -55,6 +55,8 @@ body .heading_5 { font-size: 20px; }
 
 body .heading_6 { font-size: 15px; }
 
+main > section { padding: 100px 0 130px 0; }
+
 .frame { position: relative; }
 
 .frame:before { position: absolute; content: ""; width: 50%; left: 0; top: -30px; height: 30px; background: #fff; }
@@ -65,7 +67,7 @@ body .heading_6 { font-size: 15px; }
 
 .btn:hover { background: #ff3c1f; }
 
-header { position: absolute; top: 0; width: 100%; }
+header { position: absolute; right: 0; left: 0; }
 
 header > nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
