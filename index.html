@@ -26,6 +26,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/noframework.waypoints.min.js"></script>
+    <script src="js/main.js"></script>
     <title>Expire Template</title>
 </head>
 <body>
@@ -137,7 +141,7 @@
 
         <section class="parallax frame"> <!-- parallax 시작-->
             <div class="container">
-                <h2 class="content_tit center">Paralax section</h2>
+                <h2 class="content_tit center">Parallax section</h2>
                 <p class="content_desc center">Exploring the unexplored is a risky business, but a rewarding one.</p>
             </div>
             <blockquote>
@@ -151,41 +155,164 @@
 
         <section class="stats_excerpt"> <!-- tats_excerpt 시작-->
             <div class="container">
-
-            </div>
-        </section> <!-- tats_excerpt 끝-->
-
-        <section class="latest_blog"> <!-- latest_blog 시작-->
-            <div class="container">
                 <div class="row">
                     <div class="col-md-3 item">
                         <span class="stat_icon sprite user">user icon</span>
                         <div class="item_info">
-                            <span class="count">1000</span><i>+</i>
+                            <span class="count" data-rate="1000">0</span><i>+</i>
                             <h3>Happy users</h3>
                         </div>
                     </div>
                     <div class="col-md-3 item">
                         <span class="stat_icon sprite cart">cart icon</span>
                         <div class="item_info">
-                            <span class="count">200</span>
+                            <span class="count" data-rate="200">0</span>
                             <h3>Sold products</h3>
                         </div>
                     </div>
                     <div class="col-md-3 item">
                         <span class="stat_icon sprite comment">comment icon</span>
                         <div class="item_info">
-                            <span class="count">5632</span>
+                            <span class="count" data-rate="5632">0</span>
                             <h3>Comments</h3>
                         </div>
                     </div>
                     <div class="col-md-3 item">
                         <span class="stat_icon sprite file">file icon</span>
                         <div class="item_info">
-                            <span class="count">25000</span><i>+</i>
+                            <span class="count" data-rate="25000">0</span><i>+</i>
                             <h3>Lines of code</h3>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section> <!-- tats_excerpt 끝-->
+
+        <section class="latest_blog"> <!-- latest_blog 시작-->
+            <div class="container">
+                <h2 class="content_tit center">Latest Blog Posts</h2>
+                <p class="content_desc center">Information is a source of learning. But unless it is organized, processed, and available to the right people in a format for decision making, it is a burden, not a benefit.</p>
+                <div class="blog_post_wrap">
+                    <div class="blog_list_slider">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="post_img inside_frame">
+                                    <img src="./images/blog_post_img1.jpg" alt="post img 1">
+                                </div>
+                                <div class="post_info">
+                                    <h3>Just Another Blog Post</h3>
+                                    <hr>
+                                    <div class="post_meta">
+                                        <i class="sprite post_user"></i>
+                                        <span>By Author</span>
+                                        <i class="sprite post_calendar"></i>
+                                        <span>9 November 2014</span>
+                                        <i class="sprite post_comment"></i>
+                                        <span>3</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?</p>
+                                    <a href="" class="btn">Read more</a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="post_img inside_frame">
+                                    <img src="./images/blog_post_img2.jpg" alt="post img 2">
+                                </div>
+                                <div class="post_info">
+                                    <h3>Just Another Blog Post</h3>
+                                    <hr>
+                                    <div class="post_meta">
+                                        <i class="sprite post_user"></i>
+                                        <span>By Author</span>
+                                        <i class="sprite post_calendar"></i>
+                                        <span>9 November 2014</span>
+                                        <i class="sprite post_comment"></i>
+                                        <span>3</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?</p>
+                                    <a href="" class="btn">Read more</a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="post_img inside_frame">
+                                    <img src="./images/blog_post_img3.jpg" alt="post img 3">
+                                </div>
+                                <div class="post_info">
+                                    <h3>Just Another Blog Post</h3>
+                                    <hr>
+                                    <div class="post_meta">
+                                        <i class="sprite post_user"></i>
+                                        <span>By Author</span>
+                                        <i class="sprite post_calendar"></i>
+                                        <span>9 November 2014</span>
+                                        <i class="sprite post_comment"></i>
+                                        <span>3</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?</p>
+                                    <a href="" class="btn">Read more</a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="post_img inside_frame">
+                                    <img src="./images/blog_post_img1.jpg" alt="post img 1">
+                                </div>
+                                <div class="post_info">
+                                    <h3>Just Another Blog Post</h3>
+                                    <hr>
+                                    <div class="post_meta">
+                                        <i class="sprite post_user"></i>
+                                        <span>By Author</span>
+                                        <i class="sprite post_calendar"></i>
+                                        <span>9 November 2014</span>
+                                        <i class="sprite post_comment"></i>
+                                        <span>3</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?</p>
+                                    <a href="" class="btn">Read more</a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="post_img inside_frame">
+                                    <img src="./images/blog_post_img2.jpg" alt="post img 2">
+                                </div>
+                                <div class="post_info">
+                                    <h3>Just Another Blog Post</h3>
+                                    <hr>
+                                    <div class="post_meta">
+                                        <i class="sprite post_user"></i>
+                                        <span>By Author</span>
+                                        <i class="sprite post_calendar"></i>
+                                        <span>9 November 2014</span>
+                                        <i class="sprite post_comment"></i>
+                                        <span>3</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?</p>
+                                    <a href="" class="btn">Read more</a>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="post_img inside_frame">
+                                    <img src="./images/blog_post_img3.jpg" alt="post img 3">
+                                </div>
+                                <div class="post_info">
+                                    <h3>Just Another Blog Post</h3>
+                                    <hr>
+                                    <div class="post_meta">
+                                        <i class="sprite post_user"></i>
+                                        <span>By Author</span>
+                                        <i class="sprite post_calendar"></i>
+                                        <span>9 November 2014</span>
+                                        <i class="sprite post_comment"></i>
+                                        <span>3</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at, voluptatem similique tempora voluptate quia in ea minima earum consequatur eveniet, praesentium illum error delectus optio nobis eaque distinctio! Suscipit nostrum?</p>
+                                    <a href="" class="btn">Read more</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="control blog_prev">prev</div>
+                    <div class="control blog_next">next</div>
                 </div>
             </div>
         </section> <!-- latest_blog 끝-->
@@ -216,7 +343,6 @@
 
     </footer> <!-- footer 끝-->
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+
 </body>
 </html>

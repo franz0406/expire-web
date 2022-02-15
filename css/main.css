@@ -74,6 +74,12 @@ main > section { padding: 100px 0 130px 0; }
 
 .frame:after { position: absolute; content: ""; left: 50%; top: -30px; width: 0; height: 0; border-style: solid; border-width: 15px; border-color: transparent transparent #fff #fff; }
 
+.inside_frame { position: relative; }
+
+.inside_frame:before { position: absolute; content: ""; width: 50%; right: 0; top: 0; height: 30px; background: #fff; }
+
+.inside_frame:after { position: absolute; content: ""; right: 50%; top: 0; width: 0; height: 0; border-style: solid; border-width: 15px; border-color: #fff #fff transparent transparent; }
+
 .btn { display: inline-block; padding: 0 40px; font: 600 16px/50px 'Raleway', sans-serif; color: #fff; text-transform: uppercase; border: 1px solid #fff; -webkit-box-sizing: border-box; box-sizing: border-box; background: transparent; -webkit-transition: 0.3s; transition: 0.3s; }
 
 .btn:hover { background: #ff3c1f; }
@@ -171,3 +177,63 @@ header > nav > ul.main_right_menu { -webkit-box-ordinal-group: 4; -ms-flex-order
 .parallax blockquote p { margin-bottom: 50px; font-size: 30px; line-height: 40px; font-style: italic; }
 
 .parallax blockquote small { font-size: 30px; }
+
+.stats_excerpt { background: #656d7a; }
+
+.stats_excerpt .item { display: -webkit-box; display: -ms-flexbox; display: flex; gap: 30px; color: #fff; }
+
+.stats_excerpt .item .stat_icon { width: 45px; height: 44px; }
+
+.stats_excerpt .item .stat_icon.user { background-position: 0 -92px; }
+
+.stats_excerpt .item .stat_icon.cart { background-position: -55px -92px; }
+
+.stats_excerpt .item .stat_icon.comment { background-position: -110px -92px; }
+
+.stats_excerpt .item .stat_icon.file { background-position: -165px -92px; }
+
+.stats_excerpt .item .item_info .count, .stats_excerpt .item .item_info i { font-family: 'Raleway', sans-serif; font-size: 40px; line-height: 40px; }
+
+.stats_excerpt .item .item_info h3 { font-size: 25px; font-weight: 300; margin-top: 30px; }
+
+.latest_blog .content_desc { max-width: 690px; margin: 0 auto 75px; }
+
+.latest_blog .blog_post_wrap { position: relative; }
+
+.latest_blog .blog_post_wrap .blog_list_slider { overflow: hidden; }
+
+.latest_blog .blog_post_wrap .control { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 25px; height: 42px; text-indent: -9999em; }
+
+.latest_blog .blog_post_wrap .control.blog_prev { left: -60px; background: url(../images/prev.jpg); cursor: pointer; }
+
+.latest_blog .blog_post_wrap .control.blog_prev:hover { background: url(../images/prev_hover.jpg); }
+
+.latest_blog .blog_post_wrap .control.blog_next { right: -60px; background: url(../images/next.jpg); cursor: pointer; }
+
+.latest_blog .blog_post_wrap .control.blog_next:hover { background: url(../images/next_hover.jpg); }
+
+.latest_blog li:hover .post_info h3 { color: #ff3c1f; }
+
+.latest_blog li .post_img img { width: 100%; -o-object-fit: cover; object-fit: cover; }
+
+.latest_blog li .post_info { border: 1px solid #e6e9ed; padding: 25px; }
+
+.latest_blog li .post_info h3 { font-size: 25px; font-weight: normal; line-height: 28px; color: #4e5860; -webkit-transition: color 0.3s; transition: color 0.3s; }
+
+.latest_blog li .post_info hr { margin: 10px 0; border: none; border-bottom: 1px solid #e6e9ed; }
+
+.latest_blog li .post_info p { padding: 15px 0; font-size: 14px; line-height: 25px; color: #4e5860; }
+
+.latest_blog li .post_info a { color: #4e5860; border: 1px solid #4e5860; }
+
+.latest_blog li .post_info a:hover { color: #fff; }
+
+.latest_blog li .post_info .post_meta span { margin: 0 10px; font-size: 14px; line-height: 1; font-weight: bold; color: #303030; }
+
+.latest_blog li .post_info .post_meta i { vertical-align: bottom; }
+
+.latest_blog li .post_info .post_meta .post_user { width: 14px; height: 14px; background-position: -0px -147px; }
+
+.latest_blog li .post_info .post_meta .post_calendar { width: 15px; height: 14px; background-position: -24px -147px; }
+
+.latest_blog li .post_info .post_meta .post_comment { width: 14px; height: 14px; background-position: -49px -147px; }
