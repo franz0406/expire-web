@@ -380,6 +380,7 @@ header {
     text-align: center;
     position: relative;
     border-top: 1px solid #e6e9ed;
+    padding: 100px 0 0 0;
     .sorting {
         .btn.active {
             color:#fff;
@@ -489,5 +490,14 @@ header {
         &:hover {
             color:#fff;
         }
+    }
+}
+
+// PARTNERS
+.partners {
+    border-top: 1px solid #e6e9ed;
+    img {
+        width: 100%;
+        object-fit: cover;
     }
 }

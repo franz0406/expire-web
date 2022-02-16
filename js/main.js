@@ -111,4 +111,19 @@ window.addEventListener('DOMContentLoaded', function(){
             }
         })
     }
+
+    // PARTNERS SLIDER
+    $(".partner_list").bxSlider({
+        pager: false,
+        controls: false,
+        easing:"linear",
+        auto:true,
+        autoHover:true,
+        minSlides: 3,        // 최소 슬라이드
+        maxSlides: 6,        // 최대 슬라이드
+        moveSlides: 1,       // 움직이는 슬라이드
+        slideWidth: 170,     // 슬라이드 너비 값
+        slideMargin: 30,     // 슬라이드 간격
+        shrinkItems: true    // 브라우저 너비에 맞게 반응형
+    });
 })

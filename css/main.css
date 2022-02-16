@@ -264,7 +264,7 @@ header > nav > ul.main_right_menu { -webkit-box-ordinal-group: 4; -ms-flex-order
 
 .latest_blog li .post_info .post_meta .post_comment { width: 14px; height: 14px; background-position: -49px -147px; }
 
-.portfolio { text-align: center; position: relative; border-top: 1px solid #e6e9ed; }
+.portfolio { text-align: center; position: relative; border-top: 1px solid #e6e9ed; padding: 100px 0 0 0; }
 
 .portfolio .sorting .btn.active { color: #fff; background: #ff3c1f; }
 
@@ -311,3 +311,7 @@ header > nav > ul.main_right_menu { -webkit-box-ordinal-group: 4; -ms-flex-order
 .portfolio .btn { margin: 50px auto; color: #ff3c1f; border: 1px solid #ff3c1f; }
 
 .portfolio .btn:hover { color: #fff; }
+
+.partners { border-top: 1px solid #e6e9ed; }
+
+.partners img { width: 100%; -o-object-fit: cover; object-fit: cover; }
