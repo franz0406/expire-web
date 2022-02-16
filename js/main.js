@@ -66,4 +66,49 @@ window.addEventListener('DOMContentLoaded', function(){
     next.addEventListener('click',()=>{
         blogSlider.slideNext();
     }); 
+
+    // PORTFOLIO Fillter
+    const portFolioFillter = document.querySelectorAll('.portfolio > .sorting > span');
+    const portFolioList = document.querySelectorAll('.portfolio > ul > li');
+    
+    portFolioFillter.forEach((filter)=>{
+        filter.addEventListener('click', (e)=>{
+
+            const getClass = e.target.innerText.toLowerCase();
+            const ALL = "all";
+            const WEB = "web";
+            const MOBILE = "mobile";
+            const ILLUSTRATION = "illustration";
+            const PRINT = "print";
+
+            if( getClass === ALL) {
+                portFolioList.forEach((list)=>{
+                    list.style.display = 'block';
+                })
+            } else if ( getClass === WEB ) {
+                checkClass(WEB);
+            } else if ( getClass === MOBILE ) {
+                checkClass(MOBILE);
+            } else if ( getClass === ILLUSTRATION ) {
+                checkClass(ILLUSTRATION);
+            } else if ( getClass === PRINT ) {
+                checkClass(PRINT);
+            }            
+            
+            for( var i = 0; i < portFolioFillter.length; i++){
+                portFolioFillter[i].classList.remove('active');
+            }
+            e.target.classList.add("active");
+        })
+    })
+
+    function checkClass(className){
+        portFolioList.forEach((list)=>{
+            if( list.classList.value === className ){
+                list.style.display = 'block';
+            } else {
+                list.style.display = 'none';
+            }
+        })
+    }
 })

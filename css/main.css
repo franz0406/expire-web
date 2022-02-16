@@ -80,11 +80,43 @@ main > section { padding: 100px 0 130px 0; }
 
 .inside_frame:after { position: absolute; content: ""; right: 50%; top: 0; width: 0; height: 0; border-style: solid; border-width: 15px; border-color: #fff #fff transparent transparent; }
 
-.btn { display: inline-block; padding: 0 40px; font: 600 16px/50px 'Raleway', sans-serif; color: #fff; text-transform: uppercase; border: 1px solid #fff; -webkit-box-sizing: border-box; box-sizing: border-box; background: transparent; -webkit-transition: 0.3s; transition: 0.3s; }
+.frame_outside { position: relative; }
+
+.frame_outside:before { position: absolute; content: ""; width: 50%; right: 0; top: -30px; height: 30px; background: #fff; }
+
+.frame_outside:after { position: absolute; content: ""; right: 50%; top: -30px; width: 0; height: 0; border-style: solid; border-width: 15px; border-color: transparent #fff #fff transparent; }
+
+.ribbon { position: absolute; left: -1px; bottom: 100%; width: 50%; height: 30px; background: #fff; border-top: 1px solid #e6e9ed; border-left: 1px solid #e6e9ed; }
+
+.ribbon::after { position: absolute; content: ""; left: 100%; top: 0; width: 30px; height: 30px; border-width: 15px; border-style: solid; border-color: transparent transparent #fff #fff; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.ribbon .box { position: absolute; display: block; top: 0; left: 100%; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); width: 37px; height: 41px; border-left: 1px solid #e6e9ed; }
+
+.btn { display: inline-block; padding: 0 40px; font: 600 16px/50px 'Raleway', sans-serif; color: #fff; text-transform: uppercase; border: 1px solid #fff; -webkit-box-sizing: border-box; box-sizing: border-box; background: transparent; -webkit-transition: 0.3s; transition: 0.3s; cursor: pointer; }
 
 .btn:hover { background: #ff3c1f; }
 
 .btn.primary_bg { background: #ff3c1f; }
+
+@-webkit-keyframes fadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@keyframes fadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@-webkit-keyframes slideUp { from { opacity: 0;
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%); }
+  to { opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+@keyframes slideUp { from { opacity: 0;
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%); }
+  to { opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
 
 header { position: absolute; right: 0; left: 0; }
 
@@ -149,12 +181,6 @@ header > nav > ul.main_right_menu { -webkit-box-ordinal-group: 4; -ms-flex-order
 .about_us .feature_item { position: relative; padding: 0 23px 23px; border: 1px solid #e6e9ed; }
 
 .about_us .feature_item > h3 { margin-bottom: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; -ms-flex-wrap: wrap; flex-wrap: wrap; gap: 10px; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 600; color: #303030; }
-
-.about_us .feature_item > .ribbon { position: absolute; left: -1px; bottom: 100%; width: 50%; height: 30px; background: #fff; border-top: 1px solid #e6e9ed; border-left: 1px solid #e6e9ed; }
-
-.about_us .feature_item > .ribbon::after { position: absolute; content: ""; left: 100%; top: 0; width: 30px; height: 30px; border-width: 15px; border-style: solid; border-color: transparent transparent #fff #fff; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-.about_us .feature_item > .ribbon .box { position: absolute; display: block; top: 0; left: 100%; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); width: 37px; height: 41px; border-left: 1px solid #e6e9ed; }
 
 .about_us .typo { width: 41px; height: 41px; background-position: 0 -38px; }
 
@@ -237,3 +263,51 @@ header > nav > ul.main_right_menu { -webkit-box-ordinal-group: 4; -ms-flex-order
 .latest_blog li .post_info .post_meta .post_calendar { width: 15px; height: 14px; background-position: -24px -147px; }
 
 .latest_blog li .post_info .post_meta .post_comment { width: 14px; height: 14px; background-position: -49px -147px; }
+
+.portfolio { text-align: center; position: relative; border-top: 1px solid #e6e9ed; }
+
+.portfolio .sorting .btn.active { color: #fff; background: #ff3c1f; }
+
+.portfolio ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.portfolio ul li { position: relative; width: 25%; overflow: hidden; }
+
+.portfolio ul li img { width: 100%; -o-object-fit: cover; object-fit: cover; }
+
+.portfolio ul li .hover_content { position: absolute; padding-top: 45px; left: 0; top: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); opacity: 0; -webkit-transition: 0.3s; transition: 0.3s; }
+
+.portfolio ul li .hover_content h3 { padding-bottom: 10px; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: bold; color: #fff; opacity: 0; }
+
+.portfolio ul li .hover_content > p { font-size: 15px; color: #fff; opacity: 0; }
+
+.portfolio ul li .hover_content .frame_outside { position: absolute; width: 100%; left: 0; bottom: 0; -webkit-transform: translateY(200%); transform: translateY(200%); background: rgba(255, 255, 255, 0.8); height: 37px; opacity: 0; }
+
+.portfolio ul li .hover_content .frame_outside:before { background: rgba(255, 255, 255, 0.8); }
+
+.portfolio ul li .hover_content .frame_outside:after { border-color: transparent rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.8) transparent; }
+
+.portfolio ul li .hover_content .frame_outside p { position: absolute; right: 0; bottom: 23px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: end; }
+
+.portfolio ul li .hover_content .frame_outside p a { width: 18px; height: 22px; background-position: 0 -171px; opacity: 0; }
+
+.portfolio ul li .hover_content .frame_outside p a:hover { background-position: 0 -203px; }
+
+.portfolio ul li .hover_content .frame_outside p span { margin-left: 40px; margin-right: 20px; width: 23px; height: 22px; background-position: -28px -171px; opacity: 0; }
+
+.portfolio ul li .hover_content .frame_outside p span:hover { background-position: -28px -203px; }
+
+.portfolio ul li:hover .hover_content { opacity: 1; }
+
+.portfolio ul li:hover .hover_content h3 { -webkit-animation: fadeIn .3s linear 0.1s forwards; animation: fadeIn .3s linear 0.1s forwards; }
+
+.portfolio ul li:hover .hover_content > p { -webkit-animation: fadeIn .3s linear 0.3s forwards; animation: fadeIn .3s linear 0.3s forwards; }
+
+.portfolio ul li:hover .hover_content .frame_outside { -webkit-animation: slideUp .2s ease-out forwards; animation: slideUp .2s ease-out forwards; }
+
+.portfolio ul li:hover .hover_content .frame_outside a { -webkit-animation: fadeIn .2s linear 0.3s forwards; animation: fadeIn .2s linear 0.3s forwards; }
+
+.portfolio ul li:hover .hover_content .frame_outside span { -webkit-animation: fadeIn .2s linear 0.5s forwards; animation: fadeIn .2s linear 0.5s forwards; }
+
+.portfolio .btn { margin: 50px auto; color: #ff3c1f; border: 1px solid #ff3c1f; }
+
+.portfolio .btn:hover { color: #fff; }

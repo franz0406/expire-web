@@ -174,36 +174,6 @@ header {
             font-weight: 600;
             color:#303030;
         }
-        > .ribbon {
-            position: absolute;
-            left: -1px; bottom: 100%;
-            width: 50%;
-            height: 30px;
-            background: #fff;
-            border-top: 1px solid #e6e9ed;
-            border-left: 1px solid #e6e9ed;
-            &::after {
-                position: absolute;
-                content: "";
-                left: 100%; top: 0;
-                width: 30px;
-                height: 30px;
-                border-width: 15px;
-                border-style: solid;
-                border-color: transparent transparent #fff #fff;
-                box-sizing: border-box;
-            }
-            .box {
-                position: absolute;
-                display: block;
-                top: 0; left: 100%;
-                transform-origin: 0 0;
-                transform: rotate(-45deg);
-                width: 37px;
-                height: 41px;
-                border-left: 1px solid #e6e9ed;
-            }
-        }
     }
     .typo {
         width: 41px;
@@ -401,6 +371,123 @@ header {
                     background-position: -49px -147px;
                 }
             }
+        }
+    }
+}
+
+// PORTFOLIO
+.portfolio {
+    text-align: center;
+    position: relative;
+    border-top: 1px solid #e6e9ed;
+    .sorting {
+        .btn.active {
+            color:#fff;
+            background: $primary;
+        }
+    }   
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            position: relative;
+            width: 25%;
+            overflow: hidden;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+            .hover_content {
+                position: absolute;
+                padding-top: 45px;
+                left: 0; top: 0; right: 0; bottom: 0;
+                background: rgba(0,0,0,0.7);
+                opacity: 0;
+                transition: 0.3s;                
+                h3 {
+                    padding-bottom: 10px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size:20px;
+                    font-weight: bold;
+                    color: #fff;
+                    opacity: 0;
+                }
+                > p {
+                    font-size:15px;
+                    color: #fff;
+                    opacity: 0;
+                }
+                .frame_outside {
+                    position: absolute;
+                    width: 100%;
+                    left: 0; bottom: 0;
+                    transform: translateY(200%);
+                    background: rgba(255,255,255,0.8);
+                    height: 37px;
+                    opacity: 0;
+                    &:before {
+                        background: rgba(255,255,255,0.8);
+                    }
+                    &:after {
+                        border-color: transparent rgba(255,255,255,0.8) rgba(255,255,255,0.8) transparent ;
+                    }
+                    p {                    
+                        position: absolute;
+                        right: 0; bottom: 23px;    
+                        display: flex;
+                        justify-content: end;
+                        a {
+                            width: 18px;
+                            height: 22px;
+                            background-position: 0 -171px;
+                            opacity: 0;
+                            &:hover {
+                                background-position: 0 -203px;
+                            }
+                        }
+                        span {
+                            margin-left: 40px;
+                            margin-right: 20px;
+                            width: 23px;
+                            height: 22px;
+                            background-position: -28px -171px;
+                            opacity: 0;
+                            &:hover {
+                                background-position: -28px -203px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .hover_content {
+                    opacity: 1;
+                    h3 {
+                        animation: fadeIn .3s linear 0.1s forwards;
+                    }
+                    > p {
+                        animation: fadeIn .3s linear 0.3s forwards;
+                    }
+                    .frame_outside {
+                        animation: slideUp .2s ease-out forwards;
+                        a {
+                            animation: fadeIn .2s linear 0.3s forwards;
+                        }
+                        span {
+                            animation: fadeIn .2s linear 0.5s forwards;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    .btn {
+        margin: 50px auto;
+        color:$primary;
+        border: 1px solid $primary;
+        &:hover {
+            color:#fff;
         }
     }
 }
