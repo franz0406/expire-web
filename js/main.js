@@ -126,4 +126,40 @@ window.addEventListener('DOMContentLoaded', function(){
         slideMargin: 30,     // 슬라이드 간격
         shrinkItems: true    // 브라우저 너비에 맞게 반응형
     });
+
+    // TESTIMONIALS TAB MENU
+    const tabList = document.querySelectorAll('.review_contents .item');
+    const tabLink = document.querySelectorAll('.tab_links span');
+
+    let tabindex = 0;
+
+    tabLink.forEach((elem, index)=>{
+        elem.addEventListener('click', ()=>{
+            tabindex = index;
+            for(var i=0; i < tabLink.length; i++){
+                tabLink[i].classList.remove('active');
+                tabList[i].classList.remove('active');
+            }
+            tabLink[tabindex].classList.add('active');
+            tabList[tabindex].classList.add('active');
+        })
+    })
+
+    // TESTIMONIALS ACCORDION
+    const accrdionTitle = document.querySelectorAll('.accordion dt');
+    const accrdionContent = document.querySelectorAll('.accordion dd');
+    
+    let accrdionIndex = 0;
+
+    accrdionTitle.forEach((elem, index)=>{
+        elem.addEventListener('click', ()=>{
+            accrdionIndex = index;
+            for(var i=0; i < tabLink.length; i++){
+                accrdionTitle[i].classList.remove('active');
+                accrdionContent[i].classList.remove('active');
+            }
+            accrdionTitle[accrdionIndex].classList.add('active');
+            accrdionContent[accrdionIndex].classList.add('active');
+        })
+    })
 })

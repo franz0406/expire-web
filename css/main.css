@@ -315,3 +315,53 @@ header > nav > ul.main_right_menu { -webkit-box-ordinal-group: 4; -ms-flex-order
 .partners { border-top: 1px solid #e6e9ed; }
 
 .partners img { width: 100%; -o-object-fit: cover; object-fit: cover; }
+
+.testimonials { background: url(../images/what_do_bg.jpg) no-repeat center top/cover; }
+
+.testimonials .contents_wrap { max-width: 1110px; margin: 125px auto 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; gap: 30px; }
+
+.testimonials .tab { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; background: #fff; }
+
+.testimonials .tab .review_contents .item { padding: 30px; gap: 20px; background: #fff; display: none; opacity: 0; }
+
+.testimonials .tab .review_contents .item.active { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-animation: fadeIn 0.8s forwards; animation: fadeIn 0.8s forwards; }
+
+.testimonials .tab .review_contents .item .desc h4 { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 20px; font-size: 24px; font-weight: bold; }
+
+.testimonials .tab .review_contents .item .desc h4 span { font-size: 14px; color: #ff3c1f; }
+
+.testimonials .tab .review_contents .item .desc p { margin-top: 20px; font-size: 15px; line-height: 25px; }
+
+.testimonials .tab .review_contents .item .inside_frame { -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+
+.testimonials .tab .review_contents .item .inside_frame:before { height: 12px; }
+
+.testimonials .tab .review_contents .item .inside_frame:after { border-width: 6px; }
+
+.testimonials .tab .tab_links { padding-left: 130px; padding-bottom: 20px; }
+
+.testimonials .tab .tab_links span { margin-right: 8px; display: inline-block; width: 19px; height: 19px; border: 1px solid #656d78; background: #fff; text-indent: -9999em; -webkit-transition: 0.2s; transition: 0.2s; cursor: pointer; }
+
+.testimonials .tab .tab_links span.active { background: #ff3c1f; }
+
+.testimonials .accordion { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; overflow: hidden; }
+
+.testimonials .accordion dl dt { position: relative; display: inline-block; background: #fff; font-size: 20px; text-transform: uppercase; padding: 0 30px; line-height: 30px; border-top: 1px solid #ff3c1f; border-left: 1px solid #ff3c1f; cursor: pointer; z-index: 2; }
+
+.testimonials .accordion dl dt::before { position: absolute; content: ""; left: 100%; top: 0; width: 0; height: 0; border-style: solid; border-width: 15px; border-color: transparent transparent #fff #fff; }
+
+.testimonials .accordion dl dt::after { content: ""; position: absolute; display: block; top: 0; left: 100%; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); width: 37px; height: 41px; border-left: 1px solid #ff3c1f; }
+
+.testimonials .accordion dl dt.active { border-top: 1px solid #fff; border-left: 1px solid #fff; }
+
+.testimonials .accordion dl dt.active::after { border-left: 1px solid #fff; }
+
+.testimonials .accordion dl dt:hover { color: #ff3c1f; }
+
+.testimonials .accordion dl dd { position: relative; border-top: 1px solid #ff3c1f; background: #fff; padding: 0; height: 0; }
+
+.testimonials .accordion dl dd::before { position: absolute; content: ""; top: -32px; left: 0; width: 100%; height: 31px; background: #fff; }
+
+.testimonials .accordion dl dd.active { padding: 20px; height: auto; font-size: 14px; line-height: 25px; border-top: 1px solid #fff; }
+
+.testimonials .accordion dl:first-of-type > dd::before { display: none; }
