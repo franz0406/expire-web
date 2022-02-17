@@ -35,7 +35,7 @@
 </head>
 <body>
     <header> <!-- header 시작-->
-        <nav>
+        <nav class="container">
             <h1 class="logo">
                 <a href="#">
                     <img src="./images/logo.png" alt="logo image">
@@ -505,19 +505,83 @@
                 </div>
             </div>
         </section> <!-- testimonials 끝-->
-        
-        <section class="conteact"> <!-- conteact 시작-->
 
+        <section class="conteact frame"> <!-- conteact 시작-->
+            <div class="container">
+                <h2 class="content_tit left">Get to know us better</h2>
+                <p class="content_desc left">Contact us, and we will contact you back. Want to chat? We can do that too..</p>
+                <div class="row">
+                    <div class="col-md-4 contact_info">
+                        <div class="item">
+                            <div class="sprite marker"></div>
+                            <p>
+                                623 Fifth Avenue,<br>
+                                New York, NY 10022,<br> 
+                                USA
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="sprite envelope"></div>
+                            <p><a href="#">randomness@expire.com</a></p>
+                        </div>
+                        <div class="item">
+                            <div class="sprite phone"></div>
+                            <p>
+                                Phone: +(123) 456 7890<br>
+                                Fax: +(123) 456 7899
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <form action="#" method="post">
+                            <div class="field row">
+                                <div class="col-md-6">
+                                    <label for="username">name</label>
+                                    <input type="text" id="username" name="username" placeholder="Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="usermail">mail</label>
+                                    <input type="text" id="usermail" name="usermail" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="subject">subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Subject">
+                            </div>
+                            <div class="field">
+                                <label for="message">message</label>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section> <!-- conteact 끝-->
-
-        <section class="map"> <!-- map 시작-->
-
+        
+        <section class="map inside_frame" id="ourmap"> <!-- map 시작-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17100.95314280825!2d-73.99842168653458!3d40.738925676373256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z66-46rWtIOuJtOyalQ!5e0!3m2!1sko!2skr!4v1645126044115!5m2!1sko!2skr" allowfullscreen="" loading="lazy"></iframe>
         </section> <!-- map 끝-->
 
     </main> <!-- main 끝-->
 
     <footer> <!-- footer 시작-->
-
+        <div class="footer_wrap">
+            <h2 class="logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="logo image">
+                    <span>Expire</span>
+                </a>
+            </h2>
+            <ul>
+                <li><a href="#" class="sprite facebook">facebook</a></li>
+                <li><a href="#" class="sprite twitter">twitter</a></li>
+                <li><a href="#" class="sprite in">in</a></li>
+                <li><a href="#" class="sprite google">google</a></li>
+                <li><a href="#" class="sprite instagram">instagram</a></li>
+            </ul>
+            <p class="copyright">&copy; Copyright 2014, design by dingo_design</p>
+        </div>
+        <div class="back_to_Top">back to top</div>
     </footer> <!-- footer 끝-->
 </body>
 </html>

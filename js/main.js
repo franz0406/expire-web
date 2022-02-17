@@ -1,5 +1,15 @@
 window.addEventListener('DOMContentLoaded', function(){
 
+    // HEADER 
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', ()=>{
+        
+        if( window.scrollY > 1 ){
+            header.classList.add('fix');
+        } else {
+            header.classList.remove('fix');
+        }
+    })
     // MAIN SLIDER
     const swiper = new Swiper('.main_slider_wrapper', {
         loop: true,
@@ -161,5 +171,10 @@ window.addEventListener('DOMContentLoaded', function(){
             accrdionTitle[accrdionIndex].classList.add('active');
             accrdionContent[accrdionIndex].classList.add('active');
         })
+    })
+
+    // BACK TO TOP
+    $('.back_to_Top').click(()=>{
+        $("html, body").animate({scrollTop: 0}, 1000);
     })
 })
