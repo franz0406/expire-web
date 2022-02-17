@@ -2,6 +2,11 @@ window.addEventListener('DOMContentLoaded', function(){
 
     // HEADER 
     const header = document.querySelector('header');
+    if( window.scrollY > 1 ){
+        header.classList.add('fix');
+    } else {
+        header.classList.remove('fix');
+    }
     window.addEventListener('scroll', ()=>{
         
         if( window.scrollY > 1 ){

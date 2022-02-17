@@ -30,6 +30,8 @@ a { text-decoration: none; }
     light:300
     semibold:600
 */
+html { scroll-behavior: smooth; }
+
 body { font: 14px/1 'Open Sans', sans-serif; letter-spacing: 0.01em; color: #4e5860; }
 
 body p { line-height: 25px; }
